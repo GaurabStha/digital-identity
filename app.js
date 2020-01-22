@@ -9,22 +9,6 @@ mongoose.connect('mongodb://localhost/user')
  .catch((err) => console.log('could not conenct to db', err.msg));
 
 var User = require('./models/user')
-
-async function create(){
-  const user = new User({
-    name: 'sf',
-    dob: 'sf',
-    gender: 'sf',
-    phone: 'sf',
-    permanentAddress: 'sf',
-    temporaryAddress: 'sf'
-  })
-
-  const result = await user.save();
-  console.log(result);
-}
-
-// create();
 // routes
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
